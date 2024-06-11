@@ -6,7 +6,7 @@
 <body>
 
 <h1>Mon logo</h1>
-<img src="logo.jpg" alt="Logo de mon site">
+<img src="test.png" alt="Logo de mon site">
 
 <?php
 // Connecter à la base de données MariaDB
