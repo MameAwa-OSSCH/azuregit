@@ -13,7 +13,7 @@
 $host = 'bdd-man.mysql.database.azure.com';
 $username = 'mndiaye';
 $password = 'Simplon2024@';
-$database = 'bdd-man';
+$database = 'Employés';
 
 // Connecter à la base de données MariaDB
 $db = new mysqli($host, $username, $password, $database);
