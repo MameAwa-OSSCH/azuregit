@@ -13,7 +13,7 @@
 $host = 'bdd-man.mysql.database.azure.com';
 $username = 'mndiaye';
 $password = 'Simplon2024@';
-$database = 'Employés';
+$database = 'bantko';
 
 // Connecter à la base de données MariaDB
 $db = new mysqli($host, $username, $password, $database);
@@ -24,7 +24,7 @@ if ($db->connect_error) {
 }
 
 // Sélectionner les données de la table
-$query = "SELECT nom, prenom, service, fonction, login, mail FROM salaries";
+$query = "SELECT * FROM salaries";
 $result = $db->query($query);
 
 // Vérifier le résultat de la requête
@@ -43,7 +43,6 @@ while ($row = $result->fetch_assoc()) {
     echo "<td>" . htmlspecialchars($row['fonction']) . "</td>";
     echo "<td>" . htmlspecialchars($row['login']) . "</td>";
     echo "<td>" . htmlspecialchars($row['mail']) . "</td>";
-    
     echo "</tr>";
 }
 echo "</table>";
@@ -54,3 +53,5 @@ $db->close();
 
 </body>
 </html>
+
+
