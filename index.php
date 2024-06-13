@@ -24,7 +24,7 @@ if ($db->connect_error) {
 }
 
 // Sélectionner les données de la table
-$query = "SELECT nom, prenom, adresse FROM votre_table";
+$query = "SELECT nom, prenom, service, fonction, login, mail FROM salaries";
 $result = $db->query($query);
 
 // Vérifier le résultat de la requête
@@ -34,11 +34,15 @@ if (!$result) {
 
 // Afficher les données dans un tableau HTML
 echo "<table>";
-echo "<tr><th>Nom</th><th>Prénom</th></tr>";
+echo "<tr><th>nom</th><th>prenom</th><th>service</th><th>fonction</th><th>login</th><th>mail</th></tr>";
 while ($row = $result->fetch_assoc()) {
     echo "<tr>";
     echo "<td>" . htmlspecialchars($row['ndiaye']) . "</td>";
     echo "<td>" . htmlspecialchars($row['mame']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['Informatique']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['Administrateur Systèmes et réseaux']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['m.ndiaye]) . "</td>";
+    echo "<td>" . htmlspecialchars($row['m.ndiaye@axeplane.com']) . "</td>";
     
     echo "</tr>";
 }
