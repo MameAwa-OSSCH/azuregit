@@ -37,12 +37,12 @@ echo "<table>";
 echo "<tr><th>nom</th><th>prenom</th><th>service</th><th>fonction</th><th>login</th><th>mail</th></tr>";
 while ($row = $result->fetch_assoc()) {
     echo "<tr>";
-    echo "<td>" . htmlspecialchars($row['ndiaye']) . "</td>";
-    echo "<td>" . htmlspecialchars($row['mame']) . "</td>";
-    echo "<td>" . htmlspecialchars($row['Informatique']) . "</td>";
-    echo "<td>" . htmlspecialchars($row['Administrateur Systèmes et réseaux']) . "</td>";
-    echo "<td>" . htmlspecialchars($row['m.ndiaye]) . "</td>";
-    echo "<td>" . htmlspecialchars($row['m.ndiaye@axeplane.com']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['nom']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['prenom']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['service']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['fonction']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['login']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['mail']) . "</td>";
     
     echo "</tr>";
 }
