@@ -34,12 +34,12 @@ if (!$result) {
 
 // Afficher les données dans un tableau HTML
 echo "<table>";
-echo "<tr><th>Nom</th><th>Prénom</th><th>Adresse</th></tr>";
+echo "<tr><th>Nom</th><th>Prénom</th></tr>";
 while ($row = $result->fetch_assoc()) {
     echo "<tr>";
-    echo "<td>" . htmlspecialchars($row['nom']) . "</td>";
-    echo "<td>" . htmlspecialchars($row['prenom']) . "</td>";
-    echo "<td>" . htmlspecialchars($row['adresse']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['ndiaye']) . "</td>";
+    echo "<td>" . htmlspecialchars($row['mame']) . "</td>";
+    
     echo "</tr>";
 }
 echo "</table>";
